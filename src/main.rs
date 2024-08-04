@@ -12,12 +12,13 @@ fn main() {
     Welcome to Cheyenne's RANDOM NUMBER GENERATOR! 
     ◇──◆──◇──◆   ◇──◆──◇──◆   ◇──◆──◇──◆
     When you're ready, please enter a number:");
+    
     let mut first_number = String::new();
     io::stdin()
         .read_line(&mut first_number)
         .expect("Failed to read line");
 
-    let first_number: u32 = match first_number.trim().parse() {
+    let first_number: f64 = match first_number.trim().parse() {
         Ok(num) => num,
         Err(_) => {
             println!("Your input is invalid! Please enter a number!");
@@ -31,7 +32,7 @@ fn main() {
         .read_line(&mut second_number)
         .expect("Failed to read line");
 
-    let second_number: u32 = match second_number.trim().parse() {
+    let second_number: f64 = match second_number.trim().parse() {
         Ok(num) => num,
         Err(_) => {
             println!("Invalid input. Please enter a valid number.");
@@ -50,8 +51,9 @@ fn main() {
 
     // Generate a random number in the range [min, max]
     let random_number = rng.gen_range(min..=max);
+    let rounded_random = random_number.round();
 
     // Print the random number
-    println!("A random number between {} and {} is: {}{}{}.", min, max, green, random_number, reset);
+    println!("A random number between {} and {} is: {}{}{}.", min, max, green, rounded_random, reset);
 }
 
