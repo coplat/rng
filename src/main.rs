@@ -8,9 +8,15 @@ fn main() {
     let blue = "\x1b[34m";
     let reset = "\x1b[0m";
 
-    println!("          Hello. 
+    println!("          
+    
+    
+    Hello. 
+
     Welcome to Cheyenne's RANDOM NUMBER GENERATOR! 
     ◇──◆──◇──◆   ◇──◆──◇──◆   ◇──◆──◇──◆
+
+    
     When you're ready, please enter a number:");
     
     let mut first_number = String::new();
