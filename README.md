@@ -1,3 +1,1 @@
-# rng
-
-Chayas random number generator 
+A super simple random number generator
